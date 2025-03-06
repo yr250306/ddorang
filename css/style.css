@@ -1,0 +1,1141 @@
+@charset "utf-8";
+
+/* webfont */
+/* animation */
+@keyframes motion {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes motion2 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes motion3 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bubble_move {
+    0% {
+        transform: translate(0px);
+        opacity: 0%;
+    }
+
+    25% {
+        transform: translate(20px, -50px);
+        opacity: 100%;
+    }
+
+    50% {
+        transform: translate(0px, -100px);
+        opacity: 0%;
+    }
+
+    75% {
+        transform: translate(30px, -180px);
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translate(-10px, -240px);
+        opacity: 0%;
+    }
+
+    /* 오... x축은 가로세로라서 그 수치 그대로 +(정방향) -(역방향) 설정해주면 되고 y축은 높이값만큼 더해주면 됨 */
+    /* 50% {
+        transform: translate(50+25px 50+100px);
+    }
+    75% {
+        transform: translate(50+25+30px 50+100+80px);
+    }
+    100% {
+        transform: translate(50+25+30+10px 50+100+80+60px); */
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: 'SUITE', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #333;
+}
+
+#wrap {
+    min-width: 1360px;
+    /* 뷰포트 바뀌면 이것도 바꾸어주어야함 */
+}
+
+/* header ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
+#header {
+    width: 1240px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 1px 1px 4px #00000031;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+}
+
+.logo_gnb {
+    margin-top: 20px;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb li a {
+    display: block;
+    font-weight: 700;
+    padding: 30px 50px;
+    margin-top: 30px;
+}
+
+.lang_link {
+    display: flex;
+}
+
+.lang_link li a {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: #ffffff;
+    border: 1px solid #aaa;
+    color: #aaa;
+    border-radius: 25px;
+    padding: 2px 10px;
+    margin-top: 40px;
+    margin-left: 3px;
+}
+
+.lang_link li a:hover {
+    background-color: #00A5E2;
+    color: white;
+    border: white solid 1px;
+}
+
+/* main ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+#main {
+    background: url(../images/main_bg__.svg) no-repeat top center;
+    height: 1100px;
+    margin-bottom: 560px;
+    /* 538~40px 주는게 원래 맞는데,,,좁아보여서넓힘 */
+    position: relative;
+
+}
+
+/* 캐릭터애니 */
+.main_character_1 {
+    animation: motion 3.2s ease-in-out infinite;
+}
+
+.main_character_2 {
+    animation: motion2 2.4s ease-in-out infinite;
+}
+
+/* 메인꾸미기 */
+.main_t_ch_box {
+    width: 880px;
+    height: 380px;
+    margin: 0 auto;
+    position: absolute;
+    top: 270px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_text {
+    font-weight: 800;
+    color: white;
+}
+
+.main_text h2 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.main_characters {
+    height: 380px;
+    width: 380px;
+    display: flex;
+    position: relative;
+}
+
+.main_character_1 {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+
+}
+
+.main_character_2 {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+/* section ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/* 섹션공통! */
+.section_title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section_title_S1 {
+    margin-bottom: 80px;
+}
+
+.section_title_S3 {
+    margin-bottom: 70px;
+}
+
+/* S1_booking_info ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+#S1_booking_info {
+    width: 1240px;
+    height: 700px;
+    box-sizing: border-box;
+    padding: 98px 0px 30px 0px;
+    /* background-color: white; */
+    margin: 0 auto;
+    position: absolute;
+    top: 920px;
+    left: 0;
+    right: 0;
+}
+
+#S1_booking_info>ul>li {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 메인 인포박스 */
+/* 메인 인포박스 - 공통꾸미기 */
+.S1_info_box {
+    width: 400px;
+    height: 338px;
+    padding: 35px 40px 30px 40px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.S1_info_box h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+}
+
+.S1_plus_icon {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    cursor: pointer;
+}
+
+/* 메인 인포박스 - 개별꾸미기 - 배경 */
+.first_box {
+    background: url(../images/info_box_1.svg) no-repeat center;
+}
+
+.second_box {
+    background: url(../images/info_box_2.svg) no-repeat center;
+}
+
+.third_box {
+    background: url(../images/info_box_3.svg) no-repeat center;
+}
+
+/* 메인 인포박스 - 개별꾸미기 - 속성 */
+/* first + second */
+.first_box ul,
+.second_box ul {
+    height: 208px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.first_box ul li,
+.second_box ul li {
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+
+}
+
+.first_box ul li span,
+.second_box ul li span {
+    font-size: 20px;
+    font-weight: 800;
+    color: #123A63;
+}
+
+.first_box ul li div,
+.second_box ul li div {
+    width: 90px;
+    height: 30px;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.first_box ul li p {
+    font-size: 24px;
+    color: white;
+}
+
+.second_box ul li p {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.first_box ul li:nth-child(3) p {
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 110px;
+    bottom: 0px;
+}
+
+.second_box ul li:nth-child(3) p {
+    font-size: 14px;
+}
+
+/* third */
+.third_box ul {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: disc;
+}
+
+.third_box ul li {
+
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.third_box ul li div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 서브 인포박스 */
+/* 서브 인포박스 - 공통꾸미기 */
+.S1_info_sub_box {
+    width: 400px;
+    height: 95px;
+    border-radius: 20px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.S1_info_sub_box .img_box {
+
+    display: flex;
+    align-items: baseline;
+}
+
+.S1_info_sub_box .t_i_box {
+    width: 266px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* 서브 인포박스 - 개별꾸미기 */
+.first_sub_box {
+    border: 2px solid #0077B3;
+}
+
+.second_sub_box {
+    border: 2px solid #1E95A2;
+}
+
+.third_sub_box {
+    border: 2px solid #3DC0C3;
+}
+
+.S1_plus_icon_sub {
+    cursor: pointer;
+}
+
+/* 서브 인포박스 - 개별꾸미기 - 텍스트 */
+.S1_info_sub_box p {
+    font-size: 14px;
+}
+
+.S1_info_sub_box span {
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* S2_story_info ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/* 배경 */
+#S2_story_info {
+    height: 3170px;
+    background: url(../images/story_merit_full_bg.svg) no-repeat top;
+    margin-bottom: 560px;
+}
+
+/* 1st - brand - 또랑은, 신비로운 물의 마을을 테마로 한... */
+/* 섹션설정 */
+.S2_story_info_brand {
+    width: 1056px;
+    height: 700px;
+    /* background-color: yellowgreen; */
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* 텍스트 */
+.S2_story_info_brand .t_i_box {
+    width: 1056px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.S2_story_info_brand .t_box {
+    color: white;
+}
+
+.S2_story_info_brand .t_box h3 {
+    font-size: 30px;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+.S2_story_info_brand .t_box span {
+    color: #123A63;
+}
+
+.S2_story_info_brand .t_box p {
+    font-size: 20px;
+}
+
+/* 2nd - theme - 테마설명 - 신비한 물의 마을에 초대되다! */
+/* 섹션설정 */
+.S2_story_info_theme {
+    width: 1056px;
+    height: 820px;
+    /* background-color: yellow; */
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 방울 */
+.bubble_box {
+    width: 200px;
+    height: 500px;
+}
+
+.bubble_baby1,
+.bubble_baby3 {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.bubble_baby2 {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.bubble_L {
+    position: relative;
+}
+
+.bubble_L .bubble_baby2 {
+    position: absolute;
+    bottom: 205px;
+    left: 30px;
+    animation: bubble_move 6.5s linear infinite;
+}
+
+.bubble_L .bubble_baby1 {
+    position: absolute;
+    bottom: 105px;
+    left: 100px;
+    animation: bubble_move 6.1s linear infinite;
+}
+
+.bubble_L .bubble_baby3 {
+    position: absolute;
+    bottom: 395px;
+    left: 100px;
+    animation: bubble_move 4.7s linear infinite;
+}
+
+.bubble_R {
+    position: relative;
+}
+
+.bubble_R .bubble_baby2 {
+    position: absolute;
+    bottom: 129px;
+    right: 91px;
+    animation: bubble_move 7s linear infinite;
+}
+
+.bubble_R .bubble_baby1 {
+    position: absolute;
+    bottom: 173px;
+    right: 63px;
+    animation: bubble_move 5.7s linear infinite;
+}
+
+.bubble_R .bubble_baby3 {
+    position: absolute;
+    bottom: 246px;
+    right: 100px;
+    animation: bubble_move 4.3s linear infinite;
+}
+
+
+/* 텍스트 */
+.S2_story_info_theme .t_box {
+    width: 600px;
+    height: 700px;
+    /* background-color: aqua; */
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 94px;
+}
+
+.theme_info_title,
+.character_info_title {
+    width: 136px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+
+.character_info_title {
+    margin-bottom: 30px;
+}
+
+.theme_info_title h3,
+.character_info_title h3 {
+    color: #00A5E2;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* .theme_info_title h3{
+    display: inline-block;
+    color: #00A5E2;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: white;
+    padding: 10px 35px;
+    border-radius: 25px;
+    margin-bottom: 80px;
+}  */
+/* 테마설명 - 도형만들어서 함. 패딩주니까 좀 애매....*/
+
+.theme_info_t1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.theme_info_t1 span {
+    font-weight: 800;
+    color: #123A63;
+}
+
+.theme_info_t2 {
+    color: #123A63;
+    font-weight: 700;
+    margin-bottom: 52px;
+}
+
+.theme_info_t2 span {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* .theme_button{
+    display: inline-block;
+    cursor: pointer;
+    width: 90px;
+    height: 30px;
+    border: 3px white solid;
+    border-radius: 25px;
+}
+.theme_button p{
+ color: white;
+ font-size: 16px;
+ font-size: 700;
+} */
+/* 자세히버튼 - 이거는 패딩이 좀 괜찮게 나와서... 패딩으로 해봄 */
+
+.theme_button p {
+    color: white;
+    font-size: 16px;
+    font-size: 700;
+    cursor: pointer;
+    display: inline-block;
+    padding: 2px 15px;
+    border: 3px white solid;
+    border-radius: 25px;
+}
+
+.theme_button p:hover {
+    background-color: white;
+    color: #00A5E2;
+    font-weight: 700;
+}
+
+/* 3rt - character - 캐릭터소개  */
+/* 속성설정 */
+.S2_story_info_character {
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 200px;
+
+}
+
+.character_t_i_box {
+    width: 1000px;
+    height: 372px;
+    display: flex;
+}
+
+/* 텍스트 */
+/* 타이틀은 테마설명칸에서 같이 속성부여하였음 */
+.character_t_i_box .t_box {
+    text-align: center;
+    width: 400px;
+    height: 372px;
+    /* background-color: #0077B3; */
+    padding-left: 100px;
+}
+
+.character_t_i_box .t_box .character_name {
+    color: #123A63;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.character_t_i_box .t_box .character_name span {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.character_t_i_box .t_box p {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+/* ◆스와이퍼◆ */
+.slide {
+    width: 600px;
+    background: url(../images/icon_ch_bg.svg) no-repeat center;
+    position: relative;
+}
+
+.slide .swiper {
+    width: 400px;
+    height: 100%;
+}
+
+.slide .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide .swiper-slide .img_box1 {
+    width: 210px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.slide .swiper-slide .img_box2 {
+    margin: 30px 100px 100px 110px;
+}
+
+.slide .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: motion2 2.5s ease-in-out infinite;
+    opacity: 0;
+    /* object-fit: cover; */
+
+}
+
+.slide .swiper-fade .swiper-slide-active img {
+    opacity: 1;
+}
+
+.slide .swiper-button-next {
+    content: url(../images/ch_b_R.svg);
+}
+
+.slide .swiper-button-prev {
+    content: url(../images/ch_b_L.svg);
+}
+
+.t_box .swiper-slide .caracter_name_info {
+    opacity: 0;
+}
+
+.t_box .swiper-fade .swiper-slide-active .caracter_name_info {
+    opacity: 1;
+}
+
+
+/* 4th - merit - 메리트  */
+.S2_story_info_merit {
+    width: 1100px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.merit_inner {
+    width: 1070px;
+    height: 490px;
+    /* 165px만큼 내려주기 */
+    position: absolute;
+    top: 165px;
+    left: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.merit_text_box h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.merit_text_box h2 span {
+    color: #0077B3;
+}
+
+.w_stone_wrap {
+    width: 1070px;
+    height: 304px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.w_stone_wrap p {
+    color: white;
+    font-weight: 700;
+}
+
+.w_stone_1 {
+    width: 258px;
+    height: 184px;
+    background: url(../images/icon_w_stone_1.svg) no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.w_stone_2 {
+    width: 220px;
+    height: 189px;
+    background: url(../images/icon_w_stone_2.svg) no-repeat center;
+    position: absolute;
+    top: 113px;
+    left: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.w_stone_3 {
+    width: 224px;
+    height: 191px;
+    background: url(../images/icon_w_stone_3.svg) no-repeat center;
+    position: absolute;
+    top: 113px;
+    right: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.w_stone_4 {
+    width: 215px;
+    height: 210px;
+    background: url(../images/icon_w_stone_4.svg) no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* S3_space_info ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+#S3_space_info {
+    background: url(../images/space_info_bg.svg) no-repeat center;
+    height: 2690px;
+}
+
+.S3_space_info {
+    width: 1240px;
+    height: 576px;
+    margin: 0 auto;
+    position: absolute;
+    top: 4754px;
+    left: 0;
+    right: 0;
+}
+
+.space_tap_slide_wrap {
+    width: 1240px;
+    height: 460px;
+}
+
+.space_tap_slide {
+    position: relative;
+}
+
+.space_tap_slide>li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.space_tap_slide>li.on>p {
+    width: 258px;
+    height: 60px;
+    background: #3DC0C3 url(../images/space_menu_button.svg) no-repeat top 11px right 11px;
+    color: white;
+    border-radius: 32px;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 15px;
+    padding-left: 70px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.space_tap_slide>li>p {
+    width: 258px;
+    height: 60px;
+    background: #ffffff url(../images/space_menu_button.svg) no-repeat top 11px right 11px;
+    border-radius: 32px;
+    font-size: 20px;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-left: 70px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+}
+
+.space_tap_slide>li.on>div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 940px;
+    height: 460px;
+}
+
+.space_tap_slide>li>div {
+    height: 0;
+    overflow: hidden;
+}
+
+
+
+/* 공간소개슬라이드 */
+
+#slide {
+    width: 960px;
+    height: 400px;
+    position: relative;
+}
+
+#slide .swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 140px;
+
+}
+
+#slide .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px !important; 
+    height: 400px !important;
+    margin-right: 12px !important;
+    border-radius: 25px;
+    border: solid 2px #1E95A2;
+}
+
+#slide .space_1F{
+    background: #fff url(../images/space_1F.png) no-repeat top 0 left 0;
+
+}
+
+#slide .space_2F{
+    background: #fff url(../images/space_2F.png) no-repeat top 0 left 0;
+
+}
+
+#slide .space_3F{
+    background: #fff url(../images/space_3F.png) no-repeat top 0 left 0;
+
+}
+
+#slide .space_4F{
+    background:#fff url(../images/space_4F.png) no-repeat top 0 left 0;
+
+}
+
+#slide .space_5F{
+    background: #fff url(../images/space_0F.png) no-repeat top 0 left 0;
+}
+#slide .amenity_locker{
+    background: #fff url(../images/amenity_locker.png) no-repeat top 0 left 0;
+}
+#slide .amenity_hospital{
+    background: #fff url(../images/amenity_hospital.png) no-repeat top 0 left 0;
+}
+#slide .amenity_nursing{
+    background: #fff url(../images/amenity_nursing.png) no-repeat top 0 left 0;
+}
+#slide .amenity_bookcafe{
+    background: #fff url(../images/amenity_bookcafe.png) no-repeat top 0 left 0;
+}
+#slide .amenity_baby{
+    background: #fff url(../images/amenity_baby.png) no-repeat top 0 left 0;
+}
+
+
+
+.slide_space_name_tag{
+    width: 220px;
+    height: 80px;
+    background-color: #3DC0C3;
+    border-radius: 20px;
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide_space_name_tag p{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.slide_space_info_text{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+/* #slide .swiper-slide.swiper-slide-active>element.style {
+    width: 300px;
+    height: 400px;
+    margin: 0 10px !important;
+} 
+#slide .swiper-slide.swiper-slide-next>element.style {
+    width: 300px;
+    height: 400px;
+    margin: 0 10px !important;
+} */
+
+
+
+#slide .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Custom scrollbar styles */
+#slide .swiper-scrollbar {
+    background: #1E95A2;
+    height: 8px !important;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    width: 920px;
+}
+
+#slide .swiper-scrollbar-drag {
+    width: 120px !important;
+    height: 120px !important;
+    background: url(../images/icon_tictoc.svg) no-repeat center;
+    background-size: 25%;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -55px;
+    left: -20px;
+}
