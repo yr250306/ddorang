@@ -35,3 +35,81 @@ var swiper = new Swiper(".mySwiper1", {
         hide: false,
     },
 });
+
+// 전시교육_슬라이드
+var swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+// 소식 탭
+$(function(){
+    $('.information_board li p').click(function(){
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    });
+});
+
+// aos
+AOS.init();
+
+
+//   AOS.init({
+//     duration: 800,  // 애니메이션 지속 시간 (밀리초)
+//     easing: 'ease-in-out',  // 애니메이션의 이징 함수
+//     delay: 200,  // 애니메이션 지연 시간 (밀리초)
+//     offset: 120,  // 스크롤 감지의 시작 위치 (픽셀)
+//   });
+
+// 섹션이동시 메뉴색 바뀜
+$(window).scroll(function(){
+    let scrollTop = $(this).scrollTop();
+    let sections = [
+        { min: 601, max: 1500, index: 1 },
+        { min: 1501, max: 4400, index: 2 },
+        { min: 4401, max: 7560, index: 3 },
+        { min: 7561, max: 8400, index: 4 },
+        { min: 8401, max: 10000, index: 5 }
+    ];
+
+    $(".gnb li").removeClass("on"); // 모든 li에서 'on' 제거
+
+    sections.forEach(section => {
+        if (scrollTop >= section.min && scrollTop <= section.max) {
+            $(".gnb li:nth-child(" + section.index + ")").addClass("on");
+        }
+    });
+});
+
+// svg 애니메이션
+document.addEventListener("DOMContentLoaded", function () {
+    const heartLine = document.querySelector(".heart_line");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                heartLine.classList.add("visible");
+            }
+        });
+    }, {
+        rootMargin: "-200px 0px 0px 0px", // 뷰포트에 살짝이라도 들어오면 감지
+        threshold: 0.3 // 아주 조금이라도 보이면 애니메이션 실행
+    });
+
+    if (heartLine) {
+        observer.observe(heartLine);
+    }
+});
