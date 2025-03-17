@@ -51,7 +51,7 @@
     }
 
     25% {
-        transform: translate(20px, -50px);
+        transform: translate(10px, -50px);
         opacity: 100%;
     }
 
@@ -61,7 +61,7 @@
     }
 
     75% {
-        transform: translate(30px, -180px);
+        transform: translate(20px, -180px);
         opacity: 100%;
     }
 
@@ -69,6 +69,7 @@
         transform: translate(-10px, -240px);
         opacity: 0%;
     }
+
 
     /* 오... x축은 가로세로라서 그 수치 그대로 +(정방향) -(역방향) 설정해주면 되고 y축은 높이값만큼 더해주면 됨 */
     /* 50% {
@@ -80,6 +81,90 @@
     100% {
         transform: translate(50+25+30+10px 50+100+80+60px); */
 }
+
+@keyframes rain {
+    0% {
+        transform: translateY(0px);
+        opacity: 100%;
+
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translateY(130px);
+        opacity: 0%;
+    }
+}
+
+@keyframes star {
+    0% {
+        transform: translate(-25px, -5px);
+        scale: 1;
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(-10px, -10px);
+        scale: 1.1;
+    }
+
+    50% {
+        transform: translate(0px, -5px);
+        scale: 1;
+    }
+
+    75% {
+        transform: translate(10px, -10px);
+        scale: 1.1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(25px, -5px);
+        scale: 1;
+        opacity: 0;
+    }
+}
+
+
+
+
+@keyframes cloud {
+    0% {
+        transform: translatey(-25px);
+        scale: 1;
+    }
+
+    25% {
+        scale: 1.05;
+    }
+
+    50% {
+        transform: translatey(-33px);
+        scale: 1;
+    }
+
+    75% {
+        scale: 1.05;
+    }
+
+    100% {
+        transform: translateY(-25px);
+        scale: 1;
+    }
+}
+
 
 html,
 body,
@@ -197,12 +282,45 @@ body {
     display: flex;
 }
 
-.gnb li a {
+.gnb>li>a {
     display: block;
     font-weight: 700;
     padding: 30px 50px;
     margin-top: 30px;
+
 }
+.gnb>li>a:hover{
+    color: #0077B3;
+}
+.gnb>li.on>a{
+    color: #0077B3;
+}
+
+
+/* .gnb li a p{
+    position: relative;
+}
+
+
+.gnb li a:hover p::after{
+
+    transform: scaleX(1);
+}
+
+.gnb li a p::after{
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: #77dbffa8;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: -1;
+} */
+
+
 
 .lang_link {
     display: flex;
@@ -225,6 +343,11 @@ body {
     background-color: #00A5E2;
     color: white;
     border: white solid 1px;
+}
+
+/* on */
+.scroll_move.active {
+    color: #0077B3; /* 원하는 색상으로 변경 */
 }
 
 /* main ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
@@ -306,17 +429,42 @@ body {
     margin-bottom: 70px;
 }
 
+.section_title_S3_2F {
+    font-weight: 800;
+    color: #123A63;
+    margin-bottom: 20px;
+}
+
+.section_title_S3_3F {
+    font-weight: 800;
+    color: #123A63;
+    margin-bottom: 15px;
+}
+
+.section_title_S3_4F {
+    margin-bottom: 70px;
+}
+
+.section_title_S4 {
+    margin-bottom: 70px;
+}
+
+.section_title_S5 {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
 /* S1_booking_info ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
 
 #S1_booking_info {
     width: 1240px;
     height: 700px;
     box-sizing: border-box;
-    padding: 98px 0px 30px 0px;
-    /* background-color: white; */
+    padding: 100px 0px 30px 0px;
+    /* background-color: rgb(161, 83, 83); */
     margin: 0 auto;
     position: absolute;
-    top: 920px;
+    top: 940px;
     left: 0;
     right: 0;
 }
@@ -591,7 +739,7 @@ body {
     position: absolute;
     bottom: 205px;
     left: 30px;
-    animation: bubble_move 6.5s linear infinite;
+    animation: bubble_move 4.7s linear infinite;
 }
 
 .bubble_L .bubble_baby1 {
@@ -605,7 +753,7 @@ body {
     position: absolute;
     bottom: 395px;
     left: 100px;
-    animation: bubble_move 4.7s linear infinite;
+    animation: bubble_move 5.5s linear infinite;
 }
 
 .bubble_R {
@@ -937,12 +1085,15 @@ body {
 #S3_space_info {
     background: url(../images/space_info_bg.svg) no-repeat center;
     height: 2690px;
+    /* background-color: yellow; */
 }
 
 .S3_space_info {
     width: 1240px;
     height: 576px;
     margin: 0 auto;
+    box-sizing: border-box;
+    /* padding-top: 130px; */
     position: absolute;
     top: 4754px;
     left: 0;
@@ -1030,55 +1181,60 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px !important; 
+    width: 300px !important;
     height: 400px !important;
     margin-right: 12px !important;
     border-radius: 25px;
     border: solid 2px #1E95A2;
 }
 
-#slide .space_1F{
+#slide .space_1F {
     background: #fff url(../images/space_1F.png) no-repeat top 0 left 0;
 
 }
 
-#slide .space_2F{
+#slide .space_2F {
     background: #fff url(../images/space_2F.png) no-repeat top 0 left 0;
 
 }
 
-#slide .space_3F{
+#slide .space_3F {
     background: #fff url(../images/space_3F.png) no-repeat top 0 left 0;
 
 }
 
-#slide .space_4F{
-    background:#fff url(../images/space_4F.png) no-repeat top 0 left 0;
+#slide .space_4F {
+    background: #fff url(../images/space_4F.png) no-repeat top 0 left 0;
 
 }
 
-#slide .space_5F{
+#slide .space_5F {
     background: #fff url(../images/space_0F.png) no-repeat top 0 left 0;
 }
-#slide .amenity_locker{
+
+#slide .amenity_locker {
     background: #fff url(../images/amenity_locker.png) no-repeat top 0 left 0;
 }
-#slide .amenity_hospital{
+
+#slide .amenity_hospital {
     background: #fff url(../images/amenity_hospital.png) no-repeat top 0 left 0;
 }
-#slide .amenity_nursing{
+
+#slide .amenity_nursing {
     background: #fff url(../images/amenity_nursing.png) no-repeat top 0 left 0;
 }
-#slide .amenity_bookcafe{
+
+#slide .amenity_bookcafe {
     background: #fff url(../images/amenity_bookcafe.png) no-repeat top 0 left 0;
 }
-#slide .amenity_baby{
+
+#slide .amenity_baby {
     background: #fff url(../images/amenity_baby.png) no-repeat top 0 left 0;
 }
 
 
 
-.slide_space_name_tag{
+.slide_space_name_tag {
     width: 220px;
     height: 80px;
     background-color: #3DC0C3;
@@ -1088,13 +1244,14 @@ body {
     align-items: center;
     justify-content: center;
 }
-.slide_space_name_tag p{
+
+.slide_space_name_tag p {
     font-size: 20px;
     font-weight: 800;
     color: white;
 }
 
-.slide_space_info_text{
+.slide_space_info_text {
     font-size: 16px;
     font-weight: 600;
     margin-top: 25px;
@@ -1138,4 +1295,761 @@ body {
     cursor: pointer;
     margin-top: -55px;
     left: -20px;
+}
+
+/* 2F 테마체험관 - S3_2F_theme_info*/
+.S3_2F_theme_info {
+    width: 1000px;
+    height: 820px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.S3_2F_theme_info .t_box {
+    text-align: center;
+    padding-top: 120px;
+}
+
+.S3_2F_theme_info .t_box p {
+    font-weight: 600;
+}
+
+.S3_2F_theme_info .t_box span {
+    font-weight: 800;
+    color: #123A63;
+}
+
+/* 맵 */
+.S3_2F_theme_info .map {
+    width: 1000px;
+    height: 610px;
+    background: url(../images/2F_theme_map_bg_spot.svg) no-repeat bottom 0 left -8px;
+    position: relative;
+}
+
+.S3_2F_theme_info .map_info_text_stone {
+    position: absolute;
+    left: 190px;
+    bottom: 30px;
+
+}
+
+/* 오브젝트 */
+/* 구름 */
+.map_cloud_box {
+    width: 167px;
+    height: 110px;
+    /* background-color: #444; */
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 150px;
+}
+
+.map_cloud_box .cloud_1 {
+    /* background-color: yellowgreen; */
+    box-sizing: border-box;
+    padding-top: 50px;
+    animation: cloud 4.5s infinite ease-in-out;
+}
+
+.map_cloud_box .cloud_2 {
+    animation: cloud 6s infinite ease-in-out;
+}
+
+
+/* 비 */
+.map_rain_box {
+    width: 280px;
+    height: 200px;
+    /* background-color: rgb(70, 70, 70); */
+    transform-origin: right bottom;
+    transform: rotate(30deg);
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rain1 {
+    width: 3px;
+    height: 70px;
+    background-color: #fff;
+    animation: rain 1s ease-in-out infinite;
+}
+
+.rain2 {
+    width: 2px;
+    height: 70px;
+    margin-top: 20px;
+    background-color: #fff;
+    animation: rain 0.9s ease-in-out infinite;
+}
+
+.rain3 {
+    width: 3px;
+    height: 70px;
+    background-color: #fff;
+    animation: rain 0.7s ease-in-out infinite;
+}
+
+.rain4 {
+    width: 3px;
+    height: 50px;
+    margin-top: 40px;
+    background-color: #fff;
+    animation: rain 1s ease-in-out infinite;
+}
+
+/* .rain5{
+    width: 2px;
+    height: 80px;
+    background-color: #fff;
+    animation: rain 0.8s ease-in-out infinite;
+} */
+
+
+/*  별 */
+.map_star_box {
+    width: 200px;
+    height: 100px;
+    /* background-color: #123A63; */
+    position: absolute;
+    bottom: 80px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    /* transform-origin: right bottom;
+    transform: rotate(80deg); */
+}
+
+.star1 {
+    padding-top: 30px;
+    animation: star 3.5s linear infinite;
+}
+
+.star2 {
+    padding-top: 50px;
+    animation: star 4s linear infinite;
+
+}
+
+.star3 {
+    padding-top: 20px;
+    animation: star 4.5s linear infinite;
+
+}
+
+.star4 {
+    animation: star 5s linear infinite;
+
+}
+
+.star5 {
+    padding-top: 50px;
+    padding-right: 30px;
+    animation: star 3s linear infinite;
+}
+
+/* 맵 글자 */
+/* .map_info_text .t_box{
+    width: 704px;
+    height: 500px;
+    background-color: #1E95A2;
+    position: absolute;
+
+} */
+/* 맵 글자 공통 */
+.map_info_text .t_box {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.map_info_text .t_box span {
+    font-size: 16px;
+    color: #123A63;
+    font-weight: 800;
+}
+
+
+.map_info_text .t_box p {
+    cursor: pointer;
+}
+
+
+/* 맵 글자 개별 */
+.map_info_text .t_box .map1_text {
+    position: absolute;
+    right: 200px;
+    bottom: 440px;
+    z-index: 2;
+    color: #123A63;
+
+
+}
+
+.map_info_text .t_box .map2_text {
+    position: absolute;
+    right: 145px;
+    top: 275px;
+    z-index: 2;
+    font-weight: 500;
+
+}
+
+.map_info_text .t_box .map3_text {
+    position: absolute;
+    left: 230px;
+    top: 250px;
+    z-index: 2;
+    font-weight: 500;
+
+
+}
+
+.map_info_text .t_box .map4_text {
+    position: absolute;
+    left: 265px;
+    bottom: 85px;
+    z-index: 2;
+    font-weight: 500;
+
+}
+
+.map_info_text .t_box .map5_text {
+    position: absolute;
+    right: 220px;
+    bottom: 65px;
+    z-index: 2;
+    font-weight: 500;
+}
+
+/* 3F 교육체험관 - S3_2F_theme_info*/
+.S3_3F_edu_info {
+    width: 960px;
+    height: 1530px;
+    margin: 0 auto;
+    /* background-color: rgb(27, 67, 100); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.S3_3F_edu_info .t_box {
+    text-align: center;
+    padding-top: 120px;
+    /* background-color: yellow; */
+}
+
+.S3_3F_edu_info .t_box p {
+    font-weight: 600;
+}
+
+.S3_3F_edu_info .t_box span {
+    font-weight: 800;
+    color: #123A63;
+}
+
+/* 교육 맵 꾸미기 */
+.edu_map {
+    width: 960px;
+    height: 1280px;
+    position: relative;
+}
+
+/* 교육맵 - 글자 */
+.edu_map_info_text {
+    width: 320px;
+    height: 1065px;
+    /* background-color: #00A5E2; */
+    position: absolute;
+    bottom: 120px;
+    left: 320px;
+    z-index: 2;
+
+}
+
+.edu_map_text {
+    padding-bottom: 146px;
+}
+
+.edu_map_text span {
+    font-weight: 800;
+    display: inline-block;
+    padding-bottom: 10px;
+    color: #123A63;
+}
+
+.edu_map_text p {
+    font-size: 16px;
+}
+
+.edu_map_t1,
+.edu_map_t3,
+.edu_map_t5 {
+    text-align: right;
+}
+
+
+
+
+/* 교육맵 - 사진 */
+.edu_map_info_photo {
+    width: 960px;
+    height: 1280px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.edu_map_info_photo div {
+    display: inline;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.edu_map_p1 {
+    position: absolute;
+    right: 0;
+}
+
+.edu_map_p2 {
+    position: absolute;
+    left: 0;
+    top: 245px;
+}
+
+.edu_map_p3 {
+    position: absolute;
+    right: 0;
+    top: 490px;
+}
+
+
+.edu_map_p4 {
+    position: absolute;
+    left: 0;
+    top: 738px;
+}
+
+.edu_map_p5 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
+
+/* 교육맵 - 길 */
+.heart_line {
+    /* background-color: #0077B3; */
+    position: absolute;
+    left: 152px;
+    top: 168px;
+}
+.inner_line {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* perspective: 2000px;
+    transform: rotate(180deg); */
+}
+
+.heart_line svg {
+    width: 637px;
+    height: auto;
+    /* transform: rotateY(180deg); */
+}
+/* SVG 선 애니메이션 (위에서 아래로) */
+.heart_line path {
+    stroke-dasharray: 5000;
+    stroke-dashoffset: 5000;
+    /* 처음엔 선이 안 보이게 설정 */
+    stroke: url(#SVGID_1_);
+    stroke-width: 20;
+    stroke-linecap: round;
+    fill: none;
+    transition: stroke-dashoffset 5s ease-out;
+}
+
+/* 클래스 추가 시 애니메이션 실행 (위에서 아래로 나타남) */
+.heart_line.visible path {
+    stroke-dashoffset: 0;
+}
+
+
+
+
+/* S4_exhibition_info ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+#S4_exhibition_info {
+    width: 1240px;
+    height: 820px;
+    /* background-color: rgba(255, 255, 0, 0.192); */
+    margin: 0 auto;
+    position: absolute;
+    top: 7730px;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding-top: 180px;
+}
+
+.exhibition_slide_wrap {
+    width: 1240px;
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    position: relative;
+}
+
+/* 슬라이드 태그박스(고정) */
+/* .ex_slide_tag_wrap{
+    width: 600px;
+    height: 380px;
+    background-color: transparent;
+    position: relative;
+} */
+.exhibition_tag {
+    width: 95px;
+    height: 60px;
+    border-radius: 0 0 30px 0;
+    background-color: #123A63;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* - */
+    position: absolute;
+    top: 0;
+    left: center;
+    z-index: 2;
+}
+
+
+.exhibition_what_is {
+    width: 600px;
+    height: 90px;
+    background-color: #123a63c4;
+    position: absolute;
+    bottom: 0;
+    left: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    box-sizing: border-box;
+    /* - */
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.ex_title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    /* - */
+    /* position: absolute;
+    left: 0;
+    bottom: 30px;
+    z-index:  */
+}
+
+.ex_button {
+    display: inline-block;
+    border: solid white 3px;
+    border-radius: 25px;
+    padding: 5px 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+
+.ex_button:hover {
+    background-color: white;
+    color: #123A63;
+    font-weight: 800;
+}
+
+/* ◆스와이퍼 슬라이드◆ */
+.ex_slide_wrap {
+    width: 600px;
+    height: 380px;
+    position: relative;
+}
+
+.ex_slide_wrap .swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.ex_slide_wrap .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex_slide_wrap .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ex_slide_wrap .swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ex_slide_wrap .swiper-button-next {
+    content: url(../images/ex_button_R.svg);
+    width: 50px;
+}
+
+.ex_slide_wrap .swiper-button-prev {
+    content: url(../images/ex_button_l.svg);
+    width: 50px;
+}
+
+.ex_slide_wrap .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #123A63;
+}
+
+/* S5_information_info■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+#S5_information_info {
+    width: 1240px;
+    height: 495px;
+    /* background-color: yellowgreen; */
+    margin: 0px auto;
+    margin-top: 470px;
+    padding-top: 120px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+/* 탭 시작 */
+.information_board {
+    width: 1240px;
+    height: 250px;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: #0077B3; */
+    position: relative;
+    /* - */
+    position: absolute;
+    top: 120px;
+    left: 0;
+}
+
+.info_board_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333
+}
+
+.information_board>li {
+    width: 15%;
+}
+
+.information_board>li:nth-child(4) {
+    width: 5%;
+}
+
+.information_board>li.on>p {
+    font-weight: 800;
+    color: #123A63;
+    background: url(../images/info_board_check_icon.svg) no-repeat left 15px top 6px;
+}
+
+.information_board>li>p {
+
+    text-align: center;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+}
+
+.information_board>li>p:hover {
+    font-weight: 800;
+    color: #123A63;
+}
+
+.info_board_plus {
+    /* display: block; */
+    text-align: left;
+    padding-top: 8px;
+    padding-left: 12px;
+    cursor: pointer;
+    /* background-color: yellow; */
+}
+
+/* 탭 내용 꾸미기 */
+.information_board>li>div {
+    height: 0;
+    overflow: hidden;
+}
+
+.information_board>li.on>div {
+    /* background-color: yellow; */
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    border-top: 1px solid #ddd;
+
+}
+
+.n_e_d ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.n_e_d ul li {
+    width: 50%;
+}
+
+.n_e_d ul li a {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-weight: 600;
+    border-bottom: solid 1px #ddd;
+
+}
+.n_e_d ul li a p{
+    position: relative;
+}
+
+
+.n_e_d ul li a:hover p::after{
+    /* text-decoration: underline 8px #52c8e965;
+    text-underline-offset: -4px; */
+    transform: scaleX(1);
+}
+.n_e_d ul li a p::after{
+    content: '';
+    width: 100%;
+    height: 6px;
+    background-color: #77dbffa8;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.5s;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    z-index: -1;
+}
+
+.dataroom ul li a:hover p::after{
+    transform: scaleX(0);
+
+}
+
+.n_e_d ul li a span {
+    font-size: 14px;
+}
+
+
+/* footer ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+#footer {
+    height: 480px;
+    background: url(../images/footer_bg.svg) no-repeat center;
+}
+
+.footer_inner {
+    width: 1240px;
+    height: 480px;
+    margin: 0 auto;
+    padding-top: 140px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    /* background-color: gold; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_link_box {
+    width: 800px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_link_box ul {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_link_box ul li a {
+    display: block;
+    font-size: 14px;
+}
+
+.footer_copyright {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer_copyright .copyright {
+    font-size: 12px;
+}
+
+.footer_copyright .tel {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 앵커 ■■■■■■■■■■■■■■■■■■■■■■■■■*/
+#S1_booking_info_a{
+    position: absolute;
+    top: 800px;
+    left: 0px;
+}
+#S2_story_info_a{
+    position: absolute;
+    top: 1630px;
+    left: 0px;
+}
+#S3_space_info_a{
+    position: absolute;
+    top: 4500px;
+    left: 0px;
+}
+#S4_exhibition_info_a{
+    position: absolute;
+    top: 7650px;
+    left: 0px;
+}
+#S5_information_info_a{
+    position: absolute;
+    top: 8450px;
+    left: 0px;
 }
