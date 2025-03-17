@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS CDN -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -21,24 +25,38 @@
 
         <header id="header"><!-- gnb_s -->
             <!-- 1240*120 -->
-            <h1 class="logo_gnb"><a href="index.html"><img src="./images/logo_gnb.svg" alt="logo_gnb"></a></h1>
-            <ul class="gnb">
-                <li><a href="#">관람·예약</a></li>
-                <li><a href="#">또랑이야기</a></li>
-                <li><a href="#">공간소개</a></li>
-                <li><a href="#">전시·교육</a></li>
-                <li><a href="#">소식</a></li>
+            <h1 class="logo_gnb"><a href="index.html" ><img src="./images/logo_gnb.svg" alt="logo_gnb"></a></h1>
+            <ul class="gnb" >
+                <li><a href="index.html#S1_booking_info_a" class="scroll_move" class="active">
+                        <p>관람·예약</p>
+                    </a></li>
+                <li><a href="index.html#S2_story_info_a"
+                    class="scroll_move" class="active">
+                        <p>또랑이야기</p>
+                    </a></li>
+                <li><a href="index.html#S3_space_info_a"
+                    class="scroll_move" class="active">
+                        <p>공간소개</p>
+                    </a></li>
+                <li><a href="index.html#S4_exhibition_info_a"
+                    class="scroll_move" class="active">
+                        <p>전시·교육</p>
+                    </a></li>
+                <li><a href="index.html#S5_information_info_a"
+                    class="scroll_move" class="active">
+                        <p>소식</p>
+                    </a></li>
             </ul>
             <ul class="lang_link">
-                <li><a href="#">KR</a></li>
-                <li><a href="#">EN</a></li>
+                <li><a href="javascript:return false;">KR</a></li>
+                <li><a href="javascript:return false;">EN</a></li>
             </ul>
         </header><!-- gnb_e -->
         <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
-        <main id="main"><!-- main_s -->
-            <div class="main_t_ch_box">
+        <main id="main" ><!-- main_s -->
+            <div class="main_t_ch_box" >
                 <div class="main_text">
-                    <h2>물재생 테마체험관 또랑에
+                    <h2 >물재생 테마체험관 또랑에
                         <br>오신 것을 환영합니다!
                     </h2>
                 </div>
@@ -54,7 +72,9 @@
         </main><!-- main_e -->
         <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
         <section id="S1_booking_info"><!-- S1_s -->
-            <h2 class="section_title section_title_S1">관람·예약</h2>
+            <!-- data-aos="fade-up"
+     data-aos-duration="1000" -->
+            <h2 class="section_title section_title_S1" >관람·예약</h2>
             <ul class="S1_main_boxs"><!-- S1_main_boxs_s -->
                 <li>
                     <div class="S1_info_box first_box">
@@ -201,7 +221,7 @@
             <!-- 전체배경넣기 -->
             <div class="S2_story_info_brand"><!-- 브랜드소개 start -->
                 <div class="t_i_box">
-                    <div class="t_box">
+                    <div class="t_box" data-aos="fade-right" data-aos-duration="1000">
                         <h3>또랑은,
                             <br>신비로운 물의 마을을 테마로 한
                             <br><span>물재생 테마체험관</span>입니다.
@@ -213,19 +233,19 @@
                         </p>
                     </div>
 
-                    <div class="story_info_logo">
+                    <div class="story_info_logo" data-aos="fade-left" data-aos-duration="1000">
                         <img src="./images/logo_1_full.svg" alt="logo_1_full">
                     </div>
                 </div>
             </div><!-- 브랜드소개 end -->
 
-            <div class="S2_story_info_theme"><!-- 테마설명 start -->
+            <div class="S2_story_info_theme" ><!-- 테마설명 start -->
                 <div class="bubble_box bubble_L">
                     <div class="bubble_baby1"></div>
                     <div class="bubble_baby2"></div>
                     <div class="bubble_baby3"></div>
                 </div>
-                <div class="t_box">
+                <div class="t_box" data-aos="fade-up" data-aos-duration="2000">
                     <div class="theme_info_title">
                         <h3>테마설명</h3>
                     </div>
@@ -257,7 +277,7 @@
 
             <div class="S2_story_info_character"><!-- 캐릭터소개 start -->
                 <div class="character_t_i_box">
-                    <div class="t_box">
+                    <div class="t_box" data-aos="fade-right" data-aos-duration="1000">
                         <div class="character_info_title">
                             <h3>캐릭터소개</h3>
                         </div>
@@ -288,11 +308,11 @@
                                             <br>또르르숲에서 태어난 활기찬 물의 요정
                                         </p>
                                         <p>
-                                            다른 요정들보다 작고 어리지만
-                                            <br>누구보다 또랑을 사랑하는 요정이다.
+                                            동에 번쩍 서에 번쩍!
+                                            <br>또랑에 대해 모르는 것이 없는 요정이다.
                                             <br>
-                                            <br>물의 순환이 제대로 이루어지지 않아 발생한 위기에
-                                            <br>가장 먼저 지구별에 신호를 보내었다.
+                                            <br>지구별에서 온 친구들에게 호기심이 많으며
+                                            <br>물 순환 여정의 길잡이가 된다.
                                         </p>
                                     </div>
 
@@ -306,7 +326,7 @@
                     </div>
 
 
-                    <div class="slide">
+                    <div class="slide" data-aos="fade-left" data-aos-duration="1000">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -329,7 +349,7 @@
 
             </div><!-- 캐릭터 end -->
 
-            <div class="S2_story_info_merit"><!-- 메리트 start -->
+            <div class="S2_story_info_merit" data-aos="fade-up" data-aos-duration="1000"><!-- 메리트 start -->
                 <div class="merit_inner">
                     <div class="merit_text_box">
                         <h1 class="merit_logo"><img src="./images/logo_2.svg" alt="logo_2"></h1>
@@ -340,21 +360,21 @@
                         </h2>
                     </div>
 
-                    <div class="w_stone_wrap">
-                        <div class="w_stone_1">
+                    <div class="w_stone_wrap" >
+                        <div class="w_stone_1" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
                             <p>관계 형성의 즐거움</p>
                         </div>
-                        <div class="w_stone_2">
+                        <div class="w_stone_2"data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
                             <p>서사와 모험 속
                                 <br>상상력과 공감능력
                             </p>
                         </div>
-                        <div class="w_stone_3">
+                        <div class="w_stone_3" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
                             <p>체험·실감형 공간으로
                                 <br>자연스러운 학습
                             </p>
                         </div>
-                        <div class="w_stone_4">
+                        <div class="w_stone_4"data-aos="flip-right" data-aos-duration="1000" data-aos-delay="300">
                             <p>미션을 통한
                                 <br>목표달성과 성취감
                             </p>
@@ -369,7 +389,8 @@
             <!-- 전체배경넣기 -->
 
             <div class="S3_space_info"><!-- 전체공간소개 start -->
-                <h2 class="section_title section_title_S3">공간소개</h2>
+                <!-- data-aos="fade-up" data-aos-duration="1000" -->
+                <h2 class="section_title section_title_S3" >공간소개</h2>
 
                 <div class="space_tap_slide_wrap">
                     <ul class="space_tap_slide">
@@ -398,8 +419,8 @@
                                                 </div>
                                                 <p class="slide_space_info_text">
                                                     테마이야기를 즐길 수 있는 곳으로,
-                                                    <br>물의 순환과 물의 가치성에 대해 
-                                                    <br>자연스럽게 학습을 할 수 있습니다. 
+                                                    <br>물의 순환과 물의 가치성에 대해
+                                                    <br>자연스럽게 학습을 할 수 있습니다.
                                                 </p>
                                             </div>
                                             <!-- 3F -->
@@ -408,7 +429,7 @@
                                                     <p>3F 교육체험관</p>
                                                 </div>
                                                 <p class="slide_space_info_text">
-                                                    더러워진 물이 다시 깨끗하게 재생되는 
+                                                    더러워진 물이 다시 깨끗하게 재생되는
                                                     <br>하수처리과정을 쉽고 재미있게
                                                     <br>배울 수 있는 교육체험관입니다.
                                                 </p>
@@ -420,10 +441,10 @@
                                                 </div>
                                                 <p class="slide_space_info_text">
                                                     누구나 활용 가능한 다목적 홀과
-                                                    <br>다양한 기획전시를 볼 수 있는 
+                                                    <br>다양한 기획전시를 볼 수 있는
                                                     <br>전시관이 있습니다.
                                                 </p>
-                                                    
+
                                             </div>
                                             <!-- 5F -->
                                             <div class="swiper-slide space_5F">
@@ -455,20 +476,20 @@
                                                     <p>락커룸</p>
                                                 </div>
                                                 <p class="slide_space_info_text">
-                                                    안내데스크와 매표소,
-                                                    <br>휴식공간이 마련되어 있는
-                                                    <br>공간입니다.
+                                                    관람객들의 소지품을
+                                                    <br>안전하게 보관할 수 있는
+                                                    <br>락커룸입니다.
                                                 </p>
                                             </div>
                                             <!-- 2F -->
                                             <div class="swiper-slide space_2F amenity_hospital">
                                                 <div class="slide_space_name_tag">
-                                                    <p>보건실</p>
+                                                    <p>의무실</p>
                                                 </div>
                                                 <p class="slide_space_info_text">
-                                                    테마이야기를 즐길 수 있는 곳으로,
-                                                    <br>물의 순환과 물의 가치성에 대해 
-                                                    <br>자연스럽게 학습을 할 수 있습니다. 
+                                                    관람객들의 안전사고를 대비하여
+                                                    <br>상비용 구급용품을 구비하고 있으며,
+                                                    <br>증상에 따라 응급치료가 가능합니다.
                                                 </p>
                                             </div>
                                             <!-- 3F -->
@@ -477,9 +498,9 @@
                                                     <p>수유실</p>
                                                 </div>
                                                 <p class="slide_space_info_text">
-                                                    더러워진 물이 다시 깨끗하게 재생되는 
-                                                    <br>하수처리과정을 쉽고 재미있게
-                                                    <br>배울 수 있는 교육체험관입니다.
+                                                    귀저기 교환대, 정수기, 전자레인지 등
+                                                    <br>수유 관련 비품이 구비되어있어
+                                                    <br>쾌적하게 이용 가능합니다.
                                                 </p>
                                             </div>
                                             <!-- 4F -->
@@ -488,11 +509,11 @@
                                                     <p>북카페</p>
                                                 </div>
                                                 <p class="slide_space_info_text">
-                                                    누구나 활용 가능한 다목적 홀과
-                                                    <br>다양한 기획전시를 볼 수 있는 
-                                                    <br>전시관이 있습니다.
+                                                    도서관과 카페가 함께 있어
+                                                    <br>아이와 어른이 함께 즐길 수 있으며,
+                                                    <br>식사 공간도 마련되어 있습니다.
                                                 </p>
-                                                    
+
                                             </div>
                                             <!-- 5F -->
                                             <div class="swiper-slide space_5F amenity_baby">
@@ -500,9 +521,9 @@
                                                     <p>영유아 놀이공간</p>
                                                 </div>
                                                 <p class="slide_space_info_text">
-                                                    다양한 야외 행사와
-                                                    <br>액티비티 활동을
-                                                    <br>즐길 수 있습니다.
+                                                    만 6세 미만인 영유아들이
+                                                    <br> 안전하고 활발하게
+                                                    <br> 활동할 수 있는 공간입니다.
                                                 </p>
                                             </div>
                                         </div>
@@ -519,14 +540,175 @@
             </div><!-- 전체공간소개 end -->
 
 
-
-
-
-
             <div class="S3_2F_theme_info"><!-- 2F테마체험관 start -->
+                <!-- data-aos="fade-up" data-aos-duration="1000" -->
+                <div class="t_box">
+                    <h2 class="section_title section_title_S3_2F">2F 테마체험관 </h2>
+                    <p>또랑을 지켜내기 위한 <span>물 순환의 여정!</span> 함께 떠나 볼까요?</p>
+                </div>
+
+                <div class="map" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600" -->
+                    <!-- bg 넣기 (bg/ob합본) / 구름 별 비 애니 / 화살표 동그라미 따로 / 글자 텍스트 -->
+                    <div class="map_info_text" >
+                        <div class="t_box" >
+                            <p class="map1_text" >
+                                <span>몽실몽실 구름언덕</span>
+                                <br>구름언덕에서
+                                <br>물 순환의 여정이 시작돼요!
+                            </p>
+                            <p class="map2_text">
+                                <span>졸랑졸랑 또랑샘</span>
+                                <br>구름언덕과 연결된 이곳은
+                                <br>물의 요정들의 작은 안식처예요.
+                            </p>
+                            <p class="map3_text">
+                                <span>쏴아쏴아 또르르숲</span>
+                                <br>안개가 자욱한 또르르숲에는
+                                <br>장난꾸러기 요정들이 많아서
+                                <br>조심해야해요!
+                            </p>
+                            <p class="map4_text">
+                                <span>여울여울 골짜기</span>
+                                <br>골짜기 속 깊은 동굴에는
+                                <br>비밀장소가 숨겨져있어요.
+                            </p>
+                            <p class="map5_text">
+                                <span>가람가람 은하수</span>
+                                <br>우주를 닮은 아름다운 강가는
+                                <br>지구별과 이어져있대요.
+                            </p>
+                        </div>
+                        <div class="map_info_text_stone">
+                            <img src="./images/2F_theme_info_text_off.svg" alt="2F_theme_info_text_on">
+                        </div>
+                    </div>
+
+                    <!-- 구름 -->
+                    <div class="map_cloud_box">
+                        <div class="cloud_1">
+                            <img src="./images/2F_theme_ob_cloud_1.svg" alt="2F_theme_ob_cloud_1">
+                        </div>
+                        <div class="cloud_2">
+                            <img src="./images/2F_theme_ob_cloud_2.svg" alt="2F_theme_ob_cloud_2">
+                        </div>
+                    </div>
+                    <!-- 비 -->
+                    <div class="map_rain_box">
+                        <div class="rain1"></div>
+                        <div class="rain2"></div>
+                        <div class="rain3"></div>
+                        <div class="rain4"></div>
+                        <div class="rain5"></div>
+                    </div>
+                    <!-- 별 -->
+                    <div class="map_star_box">
+                        <div class="star1"><img src="./images/2F_theme_ob_star4.svg" alt="star1"></div>
+                        <div class="star2"><img src="./images/2F_theme_ob_star3.svg" alt="star1"></div>
+                        <div class="star3"><img src="./images/2F_theme_ob_star2.svg" alt="star1"></div>
+                        <div class="star4"><img src="./images/2F_theme_ob_star1.svg" alt="star1"></div>
+                        <div class="star5"><img src="./images/2F_theme_ob_star4.svg" alt="star5"></div>
+
+                    </div>
+                </div>
             </div><!-- 2F테마체험관 end -->
 
             <div class="S3_3F_edu_info"><!-- 3F교육체험관 start -->
+
+                <div class="t_box">
+                    <!-- data-aos="fade-up" data-aos-duration="1000" -->
+                    <h2 class="section_title section_title_S3_3F">3F 교육체험관 </h2>
+                    <p>일상생활 속, 우리가 사용하는 <span>깨끗한 물</span>은 어떻게 오는 걸까요?</p>
+                </div>
+
+                <div class="edu_map">
+                    <!-- 960 1280 -->
+                    <div class="edu_map_info_text">
+                        <!-- 320 1065 -->
+                        <!-- position / relative -> edu_map -->
+                        <!-- span: padding bottom 10px / 두께 800 / 20px  p: 16px-->
+                        <!-- 24=>L / 135=>R  -->
+                        <div class="edu_map_text edu_map_t1">
+                            <span>물 재생이란?</span>
+                            <p>하수와 하수의 종류, 물 재생의 중요성과
+                                <br>물 오염을 줄이기 위한 방법 등을 배울 수 있어요!
+                            </p>
+                        </div>
+                        <div class="edu_map_text edu_map_t2">
+                            <span>하수관 여행</span>
+                            <p>우리가 사용한 물들은 어떻게 흘러갈까요?
+                                <br>맨홀 뚜껑 아래에는 어떠한 일들이 일어나는지
+                                <br>하수관 여행을 통해 살펴보아요!
+                            </p>
+                        </div>
+                        <div class="edu_map_text edu_map_t3">
+                            <span>미생물이 도움을?</span>
+                            <p>물을 다시 깨끗케 하기 위해선
+                                <br>미생물들의 도움이 꼭 필요하답니다.
+                                <br>함께 알아볼까요?
+                            </p>
+                        </div>
+                        <div class="edu_map_text edu_map_t4">
+                            <span>물의 재생과 에너지 생산</span>
+                            <p>물재생센터에 도착한 하수가 깨끗해지는 과정과
+                                <br>물이 깨끗해지는 과정에서 생산되는 에너지를 알아볼 수 있어요!
+                            </p>
+                        </div>
+                        <div class="edu_map_text edu_map_t5">
+                            <span>하수도 퀴즈와 신나는 물놀이</span>
+                            <p>관련 퀴즈를 풀어보고
+                                <br>깨끗해진 물로 즐겁게 놀아보아요!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="edu_map_info_photo">
+                        <!-- 개별 300 300 / 2,4 =>300 790 / 1,3,5 =>300 1280 -->
+                        <div class="edu_map_p1" data-aos="flip-right" data-aos-duration="1000">
+                            <img src="./images/3F_edu_map_photo1.svg" alt="edu_map_p1">
+                        </div>
+                        <div class="edu_map_p2"
+                        data-aos="flip-right" data-aos-duration="1000">
+                            <img src="./images/3F_edu_map_photo2.svg" alt="edu_map_p2">
+                        </div>
+                        <div class="edu_map_p3"
+                        data-aos="flip-right" data-aos-duration="1000">
+                            <img src="./images/3F_edu_map_photo3.svg" alt="edu_map_p3">
+                        </div>
+                        <div class="edu_map_p4"
+                        data-aos="flip-right" data-aos-duration="1000">
+                            <img src="./images/3F_edu_map_photo4.svg" alt="edu_map_p4">
+                        </div>
+                        <div class="edu_map_p5"
+                        data-aos="flip-right" data-aos-duration="1000">
+                            <img src="./images/3F_edu_map_photo5.svg" alt="edu_map_p5">
+                        </div>
+                    </div>
+
+                    <div class="heart_line" class="visible">
+                        <!-- <img src="./images/3F_edu_map_bg_line.svg" alt="edu_map"> -->
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        x="0px" y="0px" viewBox="0 0 657 960" style="enable-background:new 0 0 657 960;" xml:space="preserve">
+                        
+                        <defs>
+                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="583.7363" y1="-118.9823" 
+                                x2="238.9883" y2="832.8547" gradientTransform="matrix(1 0 0 -1 0 962)">
+                                <stop offset="0" style="stop-color:#00A5E2"/>
+                                <stop offset="1" style="stop-color:#3DC0C3"/>
+                            </linearGradient>
+                        </defs>
+    
+                        <path style="fill:none;stroke:url(#SVGID_1_);stroke-width:20;stroke-linecap:round;" 
+                            d="M646.995,10L646.995,10
+                            c-0.001,52.701-42.724,95.424-95.425,95.424H133.123C65.124,105.424,10,160.548,10,228.547l0,0
+                            c0,67.999,55.124,123.123,123.123,123.123h120.784h269.969c67.996,0,123.118,55.122,123.118,123.118l0,0
+                            c0,67.996-55.122,123.118-123.118,123.118H132.967C65.054,597.906,10,652.96,10,720.873l0,0
+                            c0,67.913,55.054,122.967,122.967,122.967h319.721h88.145c58.632,0,106.163,47.528,106.167,106.16l0,0"/>
+                    </svg>
+                        
+                     
+                    </div>
+                </div>
             </div><!-- 3F교육체험관 end -->
 
 
@@ -534,21 +716,248 @@
 
         <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
         <section id="S4_exhibition_info"><!-- S4_s -->
-            <!-- <h2 class="section_title section_title_S4">전시·교육</h2> -->
+            <!-- data-aos="fade-up"
+        data-aos-duration="1000" -->
+            <h2 class="section_title section_title_S4">전시·교육</h2>
 
+            <div class="exhibition_slide_wrap">
+
+                <div class="exhibition_slide1"><!-- 왼쪽 슬라이드 -->
+                    <div class="ex_slide_tag_wrap">
+                        <div class="exhibition_tag">
+                            <p>특별전시</p>
+                        </div>
+                        <!-- <div class="exhibition_what_is">
+                            <p class="ex_title">기획전시 <변기정화 꾸러기 모험대!>
+                            </p>
+                            <p class="ex_button">자세히보기</p>
+                        </div> -->
+                    </div>
+                    <div class="ex_slide_wrap">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><!--  슬라이드 화면1 -->
+                                    <div class="ex_slide_tag_wrap">
+                                        <!-- <div class="exhibition_tag">
+                                            <p>특별전시</p>
+                                        </div> -->
+
+                                        <div class="exhibition_what_is">
+                                            <p class="ex_title">변기정화 꾸러기 모험대!
+                                            </p>
+                                            <p class="ex_button">자세히보기</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="img_wrap">
+                                        <img src="./images/ex_banner_L_1.png" alt="ex_banner_L_1">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide"><!--  슬라이드 화면2 -->
+                                    <div class="ex_slide_tag_wrap">
+                                        <!-- <div class="exhibition_tag">
+                                            <p>특별전시</p>
+                                        </div> -->
+
+                                        <div class="exhibition_what_is">
+                                            <p class="ex_title">바닷속 해양생물이 들려주는 이야기
+                                            </p>
+                                            <p class="ex_button">자세히보기</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="img_wrap">
+                                        <img src="./images/ex_banner_L_2.png" alt="ex_banner_L_2">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="exhibition_slide2"><!-- 오른쪽 슬라이드 -->
+                    <div class="ex_slide_tag_wrap">
+                        <div class="exhibition_tag edu_tag">
+                            <p>교육</p>
+                        </div>
+                        <!-- <div class="exhibition_what_is">
+                            <p class="ex_title">기획전시 <변기정화 꾸러기 모험대!>
+                            </p>
+                            <p class="ex_button">자세히보기</p>
+                        </div> -->
+                    </div>
+                    <div class="ex_slide_wrap">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><!--  슬라이드 화면1 -->
+                                    <div class="ex_slide_tag_wrap">
+                                        <!-- <div class="exhibition_tag">
+                                            <p>특별전시</p>
+                                        </div> -->
+
+                                        <div class="exhibition_what_is">
+                                            <p class="ex_title">우리에게 필요한 물의 양은?
+                                            </p>
+                                            <p class="ex_button">자세히보기</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="img_wrap">
+                                        <img src="./images/ex_banner_R_1_new2.png" alt="ex_banner_R_1">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide"><!--  슬라이드 화면2 -->
+                                    <div class="ex_slide_tag_wrap">
+                                        <!-- <div class="exhibition_tag">
+                                            <p>특별전시</p>
+                                        </div> -->
+
+                                        <div class="exhibition_what_is">
+                                            <p class="ex_title">수상 안전 교육
+                                            </p>
+                                            <p class="ex_button">자세히보기</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="img_wrap">
+                                        <img src="./images/ex_banner_R_2.png" alt="ex_banner_R_2">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+
+                    </div>
+                </div>
         </section><!-- S4_e -->
 
         <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
-        <section id="S5_infomation_info"><!-- S5_s -->
-            <!-- <h2 class="section_title section_title_S5">소식</h2> -->
+        <section id="S5_information_info"><!-- S5_s -->
+            <!-- data-aos="fade-up"
+        data-aos-duration="1000" -->
+            <h2 class="section_title section_title_S5">소식</h2>
+
+            <ul class="information_board">
+                <!-- 공지사항 탭 -->
+                <li class="on">
+                    <p class="info_board_title">
+                        공지사항
+                    </p>
+                    <div class="n_e_d notice">
+                        <ul>
+                            <li><a href="javascript:return false;">
+                                    <p>교육체험관 임시 휴관 안내</p>
+                                    <span>2025.05.04</span>
+                                </a></li>
+                            <li><a href="javascript:return false;">
+                                    <p>5월 정기 휴관일 안내</p>
+                                    <span>2025.05.01</span>
+                                </a></li>
+                            <li><a href="javascript:return false;">
+                                    <p>체험관 진입로 포장 및 주차장 공사 안내</p>
+                                    <span>2025.04.30</span>
+                                </a></li>
+                            <li><a href="javascript:return false;">
+                                    <p>편의시설 추가확장 안내</p>
+                                    <span>2025.04.12</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- 행사체험 탭 -->
+                <li>
+                    <p class="info_board_title">행사·체험</p>
+                    <div class="n_e_d event">
+                        <ul>
+                            <li><a href="javascript:return false;">
+                                    <p>참방참방 바닷속 물장구! 스노클링 체험 안내</p>
+                                    <span>2025.05.02</span>
+                                </a></li>
+                            <li><a href="javascript:return false;">
+                                    <p>어린이날 행사 안내</p>
+                                    <span>2025.04.28</span>
+                                </a></li>
+                            <li><a href="javascript:return false;">
+                                    <p> 겨울방학 행사 안내</p>
+                                    <span> 2025.01.28 </span>
+                                </a></li>
+                            <li><a href="javascript:return false;">
+                                    <p> 개관 기념 행사 안내 </p>
+                                    <span> 2024.11.28 </span>
+                                </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- 자료실 탭 -->
+                <li>
+                    <p class="info_board_title">자료실</p>
+                    <div class="n_e_d dataroom">
+                        <ul>
+                            <li><a>
+                                    <p>게시글이 없습니다.</p>
+                                </a></li>
+                            <li><a>
+                                    <p><br></p>
+                                </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- 플러스 탭 -->
+                <li>
+                    <h3 class="info_board_plus"><img src="./images/info_board_plus_icon.svg" alt="S1_plus_icon"></h3>
+                </li>
+            </ul>
+
         </section><!-- S5_e -->
 
         <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
-        <footer>
+        <footer id="footer">
+            <div class="footer_inner">
+                <h1 class="footer_logo">
+                    <img src="images/logo_footer.svg" alt="logo_footer">
+                </h1>
 
+                <div class="footer_link_box">
+                    <ul>
+                        <li><a href="javascript:return false;">이용약관</a></li>
+                        <li><a href="javascript:return false;">개인정보처리방침</a></li>
+                        <li><a href="javascript:return false;">이메일무단수집거부</a></li>
+                        <li><a href="javascript:return false;">오시는길</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_copyright">
+                    <p class="tel">
+                        <span>부산광역시 00구 000로 00</span>
+                        <span> 전화 051 000 0000</span>
+                    </p>
+                    <p class="copyright">© COPYRIGHT 2025 DDORANG. ALL RIGHTS RESERVED.</p>
+                </div>
+
+            </div>
         </footer>
 
-
+        <!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+        <div id="S1_booking_info_a"></div>
+        <div id="S2_story_info_a"></div>
+        <div id="S3_space_info_a"></div>
+        <div id="S4_exhibition_info_a"></div>
+        <div id="S5_information_info_a"></div>
     </div><!-- wrap_e -->
 
 
@@ -564,6 +973,8 @@
 <!-- 오픈소스■■■■■■■■■■■ -->
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- aos CDN -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- google CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- 제어코드■■■■■■■■■■■ -->
