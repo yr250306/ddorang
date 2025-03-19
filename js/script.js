@@ -113,3 +113,22 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(heartLine);
     }
 });
+
+// 클릭하면 부드럽게 화면 이동하기
+const scrollPositions = [800, 1630, 4500, 7650, 8450];
+
+$(".gnb li a").click(function(e){
+    e.preventDefault(); // 기본 링크 동작 방지
+
+    let index = $(this).parent().index(); // 클릭한 a 태그의 부모 li의 인덱스 가져오기
+    let targetPosition = scrollPositions[index]; // 목표 위치
+    let currentPosition = $(window).scrollTop(); // 현재 스크롤 위치
+
+    let distance = Math.abs(targetPosition - currentPosition); // 이동 거리
+    let speed = 0.5; // 픽셀당 밀리초 (조정 가능)
+    let duration = distance * speed; // 거리 기반 지속 시간
+
+    $("html, body").animate({
+        scrollTop: targetPosition
+    }, duration);
+});
